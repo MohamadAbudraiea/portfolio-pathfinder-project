@@ -10,7 +10,7 @@ const Projects = () => {
       tags: ["React", "Tailwind CSS", "UI/UX Design", "Responsive Design"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
       github: null, // Set to null to hide GitHub button
-      external: "al-eidi.com"
+      external: "https://www.al-eidi.com/"
     },
     {
       title: "eDental",
