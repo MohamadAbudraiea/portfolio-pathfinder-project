@@ -45,7 +45,7 @@ const About = () => {
             <div className="absolute -inset-1 bg-portfolio-highlight rounded-lg opacity-20 group-hover:opacity-30 transition duration-300"></div>
             <div className="relative w-full aspect-square bg-gray-800 rounded-lg overflow-hidden">
               <img
-                src="/public/lovable-uploads/dc486bc8-37e9-4909-84bb-af952dfa2dd6.png"
+                src="/lovable-uploads/dc486bc8-37e9-4909-84bb-af952dfa2dd6.png"
                 alt="Profile"
                 className="w-full h-full object-cover mix-blend-multiply opacity-80 hover:opacity-100 transition duration-300"
               />
