@@ -20,14 +20,6 @@ const Projects = () => {
       github: "https://github.com/MohamadAbudraiea/eDental",
       external: "#"
     },
-    {
-      title: "UJIH Project Submission System",
-      description: "Developed a GitHub-based solution for submitting and monitoring hackathon projects for the University of Jordan Innovation Hackathon. Managed projects across Game Development, App Development, and Gen AI categories.",
-      tags: ["GitHub", "Project Management", "Web Development"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
-      github: "#",
-      external: "#"
-    },
   ];
   
   return (
