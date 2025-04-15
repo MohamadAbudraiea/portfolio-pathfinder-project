@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -29,9 +28,9 @@ const Navbar = () => {
       scrolled ? 'py-4 bg-portfolio-primary/90 backdrop-blur shadow-md' : 'py-6 bg-transparent'
     }`}>
       <div className="container mx-auto px-8 flex justify-between items-center">
-        {/* Logo */}
+        {/* Logo updated to MA */}
         <a href="#home" className="text-portfolio-highlight font-bold text-2xl">
-          YN
+          MA
         </a>
         
         {/* Desktop Navigation */}

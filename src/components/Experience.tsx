@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -6,6 +5,17 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
   
   const jobs = [
+    {
+      company: "DOTMEDIA",
+      position: "Backend Engineer",
+      period: "Current",
+      responsibilities: [
+        "Developing and maintaining backend services",
+        "Implementing scalable web applications",
+        "Working with modern backend technologies",
+        "Collaborating with cross-functional teams"
+      ]
+    },
     {
       company: "Jo Academy",
       position: "Lecturer",
