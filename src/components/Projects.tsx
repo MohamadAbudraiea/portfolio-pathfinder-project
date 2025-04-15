@@ -96,7 +96,7 @@ const Projects = () => {
         
         <div className="mt-20 text-center">
           <a 
-            href="https://github.com/Mohammad-Github" 
+            href="https://github.com/MohamadAbudraiea" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block py-3 px-8 border border-portfolio-highlight text-portfolio-highlight 

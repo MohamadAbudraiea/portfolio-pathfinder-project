@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const SocialSidebar = () => {
   const socialLinks = [
-    { icon: Github, url: "https://github.com/Mohammad-Github" },
+    { icon: Github, url: "https://github.com/MohamadAbudraiea" },
     { icon: Linkedin, url: "https://www.linkedin.com/in/mohamad-abudraiea-81180926b/" },
     { icon: Instagram, url: "https://www.instagram.com/moabudraiea.tech" },
     { icon: Mail, url: "mailto:mohamadbudraiea2003@outlook.com" },
