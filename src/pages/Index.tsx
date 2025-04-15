@@ -27,6 +27,9 @@ const Index = () => {
         }
       });
     });
+    
+    // Update document title
+    document.title = "Mohamad Abudraiea | Software Engineer";
   }, []);
   
   return (

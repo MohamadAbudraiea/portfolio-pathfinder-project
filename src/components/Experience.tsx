@@ -7,36 +7,47 @@ const Experience = () => {
   
   const jobs = [
     {
-      company: "Company One",
-      position: "Senior Software Engineer",
-      period: "January 2023 - Present",
+      company: "Jo Academy",
+      position: "Lecturer",
+      period: "February 2023 - Present",
       responsibilities: [
-        "Led development of a microservice-based architecture that improved system scalability by 40%",
-        "Mentored junior developers through code reviews and pair programming sessions",
-        "Implemented CI/CD pipelines that reduced deployment time by 60%",
-        "Collaborated with product teams to define and implement new features",
+        "Teach OOP in Java, C++, and relational databases to university students",
+        "Develop comprehensive course materials for programming concepts",
+        "Guide students through programming concepts and practical applications",
+        "Provide one-on-one mentoring for students struggling with complex topics"
       ]
     },
     {
-      company: "Company Two",
-      position: "Software Engineer",
-      period: "May 2020 - December 2022",
+      company: "Thinking Flares School",
+      position: "Operational Manager",
+      period: "February 2021 - October 2024",
       responsibilities: [
-        "Developed responsive web applications using React, Redux, and Node.js",
-        "Optimized database queries resulting in 30% faster page loads",
-        "Worked with cross-functional teams to deliver features on time",
-        "Participated in agile development processes including daily standups and sprint planning",
+        "Implemented IT-driven business solutions to enhance efficiency",
+        "Streamlined operations through technological integration",
+        "Oversaw business strategy planning and execution in a hybrid work environment",
+        "Improved overall school experience through modern management techniques"
       ]
     },
     {
-      company: "Company Three",
-      position: "Frontend Developer",
-      period: "July 2018 - April 2020",
+      company: "Tumed Applications",
+      position: ".NET Web Developer Intern",
+      period: "May 2023 - August 2023",
       responsibilities: [
-        "Created responsive and accessible user interfaces using modern HTML, CSS, and JavaScript",
-        "Built reusable component libraries that improved development efficiency",
-        "Collaborated with designers to implement pixel-perfect UIs",
-        "Performed code refactoring to improve maintainability",
+        "Learned MVC architecture and building RESTful APIs using .NET",
+        "Enhanced backend development skills through practical application",
+        "Collaborated with senior developers on real-world projects",
+        "Participated in code reviews and improved coding practices"
+      ]
+    },
+    {
+      company: "Hope International Academy",
+      position: "UI/UX Designer Intern",
+      period: "September 2023 - November 2023",
+      responsibilities: [
+        "Gained professional expertise in Figma for interface design",
+        "Created user-friendly interfaces for various applications",
+        "Improved UI/UX workflows and design processes",
+        "Collaborated with development teams to implement designs"
       ]
     },
   ];
@@ -102,12 +113,11 @@ const Experience = () => {
         
         <div className="mt-16 text-center">
           <a 
-            href="#" 
+            href="#contact" 
             className="inline-block py-3 px-8 border border-portfolio-highlight text-portfolio-highlight 
             font-mono rounded hover:bg-portfolio-highlight/10 transition-all duration-300"
-            download
           >
-            Download Resume
+            Get In Touch
           </a>
         </div>
       </motion.div>

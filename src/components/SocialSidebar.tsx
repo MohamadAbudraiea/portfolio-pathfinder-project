@@ -1,14 +1,12 @@
 
-import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SocialSidebar = () => {
   const socialLinks = [
-    { icon: Github, url: "https://github.com" },
-    { icon: Linkedin, url: "https://linkedin.com" },
-    { icon: Twitter, url: "https://twitter.com" },
-    { icon: Instagram, url: "https://instagram.com" },
-    { icon: Mail, url: "mailto:youremail@example.com" },
+    { icon: Github, url: "https://github.com/Mohammad-Github" },
+    { icon: Linkedin, url: "https://linkedin.com/in/Mohammad_Linkedin" },
+    { icon: Mail, url: "mailto:mohamadbudraiea2003@outlook.com" },
   ];
 
   return (

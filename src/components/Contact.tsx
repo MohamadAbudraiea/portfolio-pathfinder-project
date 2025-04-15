@@ -13,22 +13,26 @@ const Contact = () => {
       >
         <p className="font-mono text-portfolio-highlight mb-2">05. What's Next?</p>
         <h2 className="text-4xl md:text-5xl font-bold text-portfolio-heading mb-6">Get In Touch</h2>
+        <p className="text-portfolio-text mb-8">
+          I'm currently looking for new opportunities in backend development and software architecture. Whether you have a question, a project idea, or just want to say hi, I'll do my best to get back to you!
+        </p>
+        
         <p className="text-portfolio-text mb-12">
-          I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
-          I'll do my best to get back to you!
+          <span className="font-bold">Location:</span> Amman, Jordan (Middle East)<br />
+          <span className="font-bold">Mobile:</span> +962 799742003
         </p>
         
         <a 
-          href="mailto:youremail@example.com" 
+          href="mailto:mohamadbudraiea2003@outlook.com" 
           className="inline-block py-4 px-10 border-2 border-portfolio-highlight text-portfolio-highlight 
-          font-mono rounded hover:bg-portfolio-highlight/10 transition-all duration-300"
+          font-mono rounded hover:bg-portfolio-highlight/10 transition-all duration-300 mb-10"
         >
           Say Hello
         </a>
         
         <div className="mt-24 text-portfolio-text font-mono text-sm">
           <p>Built with React + Tailwind CSS</p>
-          <p>Designed & Developed by Your Name</p>
+          <p>Designed & Developed by Mohamad Abudraiea</p>
         </div>
       </motion.div>
     </section>

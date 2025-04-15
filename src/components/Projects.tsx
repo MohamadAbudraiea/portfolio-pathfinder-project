@@ -5,26 +5,26 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Project One",
-      description: "A feature-rich web application that allows users to manage their tasks efficiently. Built with React and Node.js, featuring real-time updates and advanced filtering capabilities.",
-      tags: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
-      github: "#",
-      external: "#"
-    },
-    {
-      title: "Project Two",
-      description: "An e-commerce platform with a sleek UI and robust backend. Features include user authentication, product filtering, cart functionality, and secure payment processing.",
-      tags: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS", "Prisma"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
-      github: "#",
-      external: "#"
-    },
-    {
-      title: "Project Three",
-      description: "A modern portfolio site built with performance and accessibility in mind. Features smooth animations, responsive design, and static site generation for optimal loading speed.",
-      tags: ["React", "Gatsby", "GraphQL", "Styled Components"],
+      title: "al-eidi.com",
+      description: "A responsive company website built from scratch using React and Tailwind CSS. Implemented modern animations for enhanced user experience, designed a new company logo, and built a professional portfolio based on client requirements. Focused on clean UI/UX and performance optimization across all devices.",
+      tags: ["React", "Tailwind CSS", "UI/UX Design", "Responsive Design"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
+      github: "#",
+      external: "#"
+    },
+    {
+      title: "eDental",
+      description: "A web-based dental clinic management system using PHP for backend logic and PHPMyAdmin for database management. Features include appointment scheduling with real-time availability updates, automated notifications, and role-based access control for patients, dentists, and administrators.",
+      tags: ["PHP", "PHPMyAdmin", "Bootstrap", "JavaScript", "Database Design"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
+      github: "#",
+      external: "#"
+    },
+    {
+      title: "UJIH Project Submission System",
+      description: "Developed a GitHub-based solution for submitting and monitoring hackathon projects for the University of Jordan Innovation Hackathon. Managed projects across Game Development, App Development, and Gen AI categories.",
+      tags: ["GitHub", "Project Management", "Web Development"],
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80",
       github: "#",
       external: "#"
     },
@@ -102,7 +102,9 @@ const Projects = () => {
         
         <div className="mt-20 text-center">
           <a 
-            href="#" 
+            href="https://github.com/Mohammad-Github" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block py-3 px-8 border border-portfolio-highlight text-portfolio-highlight 
             font-mono rounded hover:bg-portfolio-highlight/10 transition-all duration-300"
           >

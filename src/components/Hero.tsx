@@ -11,14 +11,15 @@ const Hero = () => {
       >
         <p className="text-portfolio-highlight font-mono mb-5">Hi, my name is</p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-portfolio-heading mb-4">
-          Your Name.
+          Mohamad Abudraiea.
         </h1>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-text mb-6">
-          I build things for the web.
+          I build exceptional web experiences.
         </h2>
         <p className="max-w-xl text-portfolio-text text-lg mb-12">
-          I'm a software engineer specializing in building exceptional digital experiences.
-          Currently, I'm focused on building accessible, human-centered products.
+          I'm a software engineer specializing in backend development with Node.js and Express. 
+          Currently a fourth-year Computer Information Systems student with a passion for building 
+          scalable web applications and robust backend systems.
         </p>
         <a 
           href="#projects" 

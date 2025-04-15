@@ -19,19 +19,25 @@ const About = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div className="md:col-span-2 text-portfolio-text">
             <p className="mb-4">
-              Hello! I'm a passionate software engineer with expertise in building exceptional digital products. 
-              My journey in software development started when I decided to try creating custom websites — that 
-              curiosity quickly turned into a passion for coding.
+              Hello! I'm Mohamad, a fourth-year Computer Information Systems student at the University of Jordan with a 
+              strong passion for web development, particularly backend development using Node.js and Express.
             </p>
             
             <p className="mb-4">
-              Fast-forward to today, I've had the privilege of working at various organizations where I've honed
-              my skills in software architecture, full-stack development, and leading technical teams.
+              My journey in software development has led me through various technologies and roles, from lecturing OOP concepts 
+              at Jo Academy to managing operations at a family-owned school, where I implemented IT-driven business solutions 
+              to enhance efficiency.
             </p>
             
             <p className="mb-4">
-              My main focus these days is building accessible, inclusive products and digital experiences for
-              a variety of clients. I'm particularly interested in the intersection of technology and user experience.
+              I'm particularly interested in backend development, distributed databases, scalable web applications, and 
+              software architecture. I enjoy building robust systems that can handle complex business requirements while 
+              maintaining clean code principles.
+            </p>
+
+            <p className="mb-4">
+              When I'm not coding, I'm expanding my knowledge through courses and contributing to the tech community by 
+              volunteering at events like the University of Jordan Innovation Hackathon, where I led the volunteering team.
             </p>
           </div>
           
