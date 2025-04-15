@@ -19,6 +19,14 @@ export default {
 		},
 		extend: {
 			colors: {
+				portfolio: {
+					primary: '#0A192F',     // Dark blue
+					secondary: '#112240',   // Secondary darker blue
+					tertiary: '#233554',    // Light blue for borders
+					text: '#8892B0',        // Muted text
+					highlight: '#64FFDA',   // Highlight teal
+					heading: '#CCD6F6',     // Light grey for headings
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
