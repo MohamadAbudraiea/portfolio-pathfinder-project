@@ -5,28 +5,38 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Backend Development",
-      skills: ["Node.js", "Express", "PHP", "RESTful API", "Java", "C++", "C#"],
-      icon: "⚙️"
+      title: "Programming Languages",
+      skills: ["Java", "JavaScript", "PHP", "C++", "C#"],
+      icon: "💻"
     },
     {
-      title: "Frontend Development", 
-      skills: ["React", "JavaScript", "HTML/CSS", "Bootstrap", "Figma UI/UX"],
-      icon: "🎨"
-    },
-    {
-      title: "Database Technologies",
-      skills: ["SQL Databases", "NoSQL Databases", "PHPMyAdmin", "MongoDB Atlas"],
-      icon: "🗄️"
-    },
-    {
-      title: "Tools & Methodologies",
-      skills: ["Git & GitHub", "OOP", "Functional Programming", "Testing & Debugging"],
+      title: "Tools",
+      skills: ["Git", "GitHub", "Figma", "Postman", "Jira"],
       icon: "🛠️"
     },
     {
+      title: "Methodologies",
+      skills: ["OOP", "Functional Programming", "Agile Development", "RESTful API Design", "MVC Pattern"],
+      icon: "⚡"
+    },
+    {
+      title: "Backend Development",
+      skills: ["Node.js", "PHP Laravel", "ASP.NET", "MERN Stack", "PERN Stack"],
+      icon: "⚙️"
+    },
+    {
+      title: "Databases",
+      skills: ["SQL DB", "NoSQL DB", "MySQL", "PostgreSQL", "ORM", "ODM"],
+      icon: "🗄️"
+    },
+    {
+      title: "Frontend Development",
+      skills: ["React.js", "HTML/CSS", "Tailwind CSS", "Bootstrap"],
+      icon: "🎨"
+    },
+    {
       title: "Soft Skills",
-      skills: ["Team Leading", "Communication", "Project Management", "Strategic Thinking"],
+      skills: ["Team Leading", "Communication", "Project Management", "Strategic Thinking", "Rapid Learning"],
       icon: "💡"
     },
     {

@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SocialBar from './components/SocialBar';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+      <SocialBar />
     </div>
   );
 }

@@ -20,21 +20,6 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="contact-info">
-            <div className="contact-item">
-              <h3>📍 Location</h3>
-              <p>Amman, Jordan (Middle East)</p>
-            </div>
-            <div className="contact-item">
-              <h3>📱 Mobile</h3>
-              <p>+962 799742003</p>
-            </div>
-            <div className="contact-item">
-              <h3>✉️ Email</h3>
-              <a href="mailto:mohamadabudraiea2003@outlook.com">mohamadabudraiea2003@outlook.com</a>
-            </div>
-          </div>
-
           <div className="contact-buttons">
             <a href="mailto:mohamadabudraiea2003@outlook.com" className="btn btn-primary">
               Say Hello
