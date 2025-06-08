@@ -1,0 +1,179 @@
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.experience-tabs {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #233554;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  text-align: left;
+  color: #8892b0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  margin-left: -2px;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  border-left-color: #64ffda;
+}
+
+.experience-content {
+  position: relative;
+}
+
+.experience-panel {
+  display: none;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.experience-panel.active {
+  display: block;
+}
+
+.experience-panel h3 {
+  color: #ccd6f6;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-highlight {
+  color: #64ffda;
+}
+
+.experience-period {
+  color: #8892b0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-location {
+  color: #64ffda;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities-list {
+  list-style: none;
+  color: #8892b0;
+  line-height: 1.7;
+}
+
+.responsibilities-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.responsibilities-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+}
+
+.volunteering-section {
+  margin-top: 4rem;
+}
+
+.volunteering-title {
+  color: #ccd6f6;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.volunteering-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #233554;
+  margin-left: 1rem;
+}
+
+.volunteering-card {
+  background: #112240;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #233554;
+  transition: all 0.3s ease;
+}
+
+.volunteering-card:hover {
+  border-color: #64ffda;
+  transform: translateY(-5px);
+}
+
+.volunteering-card h4 {
+  color: #ccd6f6;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.volunteering-company {
+  color: #64ffda;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.volunteering-period {
+  color: #8892b0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.volunteering-description {
+  color: #8892b0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-tabs {
+    flex-direction: row;
+    border-left: none;
+    border-bottom: 2px solid #233554;
+    overflow-x: auto;
+  }
+
+  .tab-button {
+    white-space: nowrap;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    margin-left: 0;
+    margin-bottom: -2px;
+  }
+
+  .tab-button:hover,
+  .tab-button.active {
+    border-left: none;
+    border-bottom-color: #64ffda;
+  }
+
+  .volunteering-card {
+    padding: 1.5rem;
+  }
+}
