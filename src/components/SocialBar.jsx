@@ -1,20 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './SocialBar.css';
 
 const SocialBar = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setIsVisible(scrollTop > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const socialLinks = [
     {
       name: 'Email',
@@ -39,7 +27,7 @@ const SocialBar = () => {
   ];
 
   return (
-    <div className={`social-bar ${isVisible ? 'visible' : ''}`}>
+    <div className="social-bar">
       {socialLinks.map((link, index) => (
         <a
           key={index}
@@ -51,7 +39,6 @@ const SocialBar = () => {
           title={link.name}
         >
           <span className="social-icon">{link.icon}</span>
-          <span className="social-text">{link.name}</span>
         </a>
       ))}
     </div>

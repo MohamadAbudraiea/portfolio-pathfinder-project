@@ -2,60 +2,112 @@
 .social-bar {
   position: fixed;
   top: 50%;
-  right: -250px;
+  right: 20px;
   transform: translateY(-50%);
   z-index: 1000;
-  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.social-bar.visible {
-  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .social-bar-item {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   background: rgba(17, 34, 64, 0.95);
   color: #ccd6f6;
   text-decoration: none;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1px;
-  border-left: 3px solid #64ffda;
-  transition: all 0.3s ease;
+  border-radius: 50%;
+  border: 2px solid #64ffda;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   backdrop-filter: blur(10px);
-  animation: slideInRight 0.6s ease-out both;
+  animation: bounceIn 0.6s ease-out both;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-bar-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(100, 255, 218, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.social-bar-item:hover::before {
+  width: 100%;
+  height: 100%;
 }
 
 .social-bar-item:hover {
   background: rgba(100, 255, 218, 0.1);
   color: #64ffda;
-  padding-left: 2rem;
-  border-left-width: 5px;
-  box-shadow: -5px 0 20px rgba(100, 255, 218, 0.2);
+  transform: scale(1.1) rotate(5deg);
+  border-color: #64ffda;
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.4), 
+              0 0 40px rgba(100, 255, 218, 0.2);
 }
 
 .social-icon {
-  font-size: 1.2rem;
-  margin-right: 0.75rem;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 
-.social-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  white-space: nowrap;
+.social-bar-item:hover .social-icon {
+  transform: scale(1.1);
 }
 
-@keyframes slideInRight {
-  from {
+@keyframes bounceIn {
+  0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: scale(0.3) rotate(-180deg);
   }
-  to {
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1) rotate(-10deg);
+  }
+  100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1) rotate(0deg);
   }
 }
 
+/* Floating animation for subtle movement */
+.social-bar-item:nth-child(1) {
+  animation: bounceIn 0.6s ease-out both, float 3s ease-in-out infinite;
+}
+
+.social-bar-item:nth-child(2) {
+  animation: bounceIn 0.7s ease-out both, float 3s ease-in-out infinite 0.5s;
+}
+
+.social-bar-item:nth-child(3) {
+  animation: bounceIn 0.8s ease-out both, float 3s ease-in-out infinite 1s;
+}
+
+.social-bar-item:nth-child(4) {
+  animation: bounceIn 0.9s ease-out both, float 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile Design */
 @media (max-width: 768px) {
   .social-bar {
     position: fixed;
@@ -63,40 +115,94 @@
     left: 50%;
     right: auto;
     top: auto;
-    transform: translateX(-50%) translateY(100px);
+    transform: translateX(-50%);
     flex-direction: row;
-    display: flex;
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    gap: 15px;
+    padding: 15px 20px;
+    background: rgba(17, 34, 64, 0.95);
+    border-radius: 30px;
+    border: 2px solid #64ffda;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(100, 255, 218, 0.1);
   }
 
-  .social-bar.visible {
-    transform: translateX(-50%) translateY(0);
+  .social-bar::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #64ffda, #112240, #64ffda);
+    border-radius: 30px;
+    z-index: -1;
+    animation: borderGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes borderGlow {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 
   .social-bar-item {
-    margin-bottom: 0;
-    border-left: none;
-    border-top: 3px solid #64ffda;
-    padding: 0.75rem 1rem;
-    flex-direction: column;
-    text-align: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    position: relative;
+  }
+
+  .social-bar-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+
+  .social-bar-item:hover::before {
+    transform: scale(1);
   }
 
   .social-bar-item:hover {
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-    border-top-width: 5px;
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
   }
 
   .social-icon {
-    margin-right: 0;
-    margin-bottom: 0.25rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
-  .social-text {
-    font-size: 0.7rem;
+  /* Remove floating animation on mobile for better performance */
+  .social-bar-item:nth-child(n) {
+    animation: bounceIn 0.6s ease-out both;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .social-bar {
+    bottom: 15px;
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .social-bar-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
   }
 }
