@@ -5,20 +5,28 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "ILM-VERSE",
+      description: "Full Learning Management System with comprehensive dashboards for Admins, Teachers, Students and Parents. Features include assignments and quizzes system, absence reports, performance reports, and marketing features.",
+      tags: ["MERN Stack", "PERN Stack", "Supabase", "MongoDB Atlas"],
+      image: "/lovable-uploads/01ab5a31-1046-4779-aa13-338100a998e2.png",
+      github: "https://github.com/MohamadAbudraiea/ILM-Verse",
+      external: "https://github.com/MohamadAbudraiea/ILM-Verse"
+    },
+    {
       title: "al-eidi.com",
       description: "A responsive company website built from scratch using React and Tailwind CSS. Implemented modern animations for enhanced user experience, designed a new company logo, and built a professional portfolio based on client requirements. Focused on clean UI/UX and performance optimization across all devices.",
       tags: ["React", "Tailwind CSS", "UI/UX Design", "Responsive Design"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
-      github: null, // Set to null to hide GitHub button
-      external: "https://www.al-eidi.com/"
+      image: "/lovable-uploads/1e556792-9292-45eb-b8f4-29bd506ad332.png",
+      github: null,
+      external: "https://www.al-eidi.com"
     },
     {
       title: "eDental",
       description: "A web-based dental clinic management system using PHP for backend logic and PHPMyAdmin for database management. Features include appointment scheduling with real-time availability updates, automated notifications, and role-based access control for patients, dentists, and administrators.",
       tags: ["PHP", "PHPMyAdmin", "Bootstrap", "JavaScript", "Database Design"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
       github: "https://github.com/MohamadAbudraiea/eDental",
-      external: "#"
+      external: "https://github.com/MohamadAbudraiea/eDental"
     },
   ];
   
@@ -84,7 +92,7 @@ const Projects = () => {
                         <Github size={20} />
                       </a>
                     )}
-                    <a href={project.external} aria-label="Live Demo" className="text-portfolio-heading hover:text-portfolio-highlight transition-colors">
+                    <a href={project.external} target="_blank" rel="noopener noreferrer" aria-label="Live Demo" className="text-portfolio-heading hover:text-portfolio-highlight transition-colors">
                       <ExternalLink size={20} />
                     </a>
                   </div>
