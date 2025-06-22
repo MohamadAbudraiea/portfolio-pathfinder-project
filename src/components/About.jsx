@@ -37,24 +37,6 @@ const About = () => {
               </ul>
             </div>
           </div>
-          <div className="about-stats">
-            <div className="stat-card">
-              <h3>4+</h3>
-              <p>Years of Study</p>
-            </div>
-            <div className="stat-card">
-              <h3>3+</h3>
-              <p>Major Projects</p>
-            </div>
-            <div className="stat-card">
-              <h3>2+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div className="stat-card">
-              <h3>5+</h3>
-              <p>Technologies</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

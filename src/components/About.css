@@ -27,10 +27,8 @@
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
-  align-items: start;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-text {
@@ -72,61 +70,12 @@
   color: #64ffda;
 }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.stat-card {
-  background: #0a0e27;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  border: 1px solid #233554;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-  border-color: #64ffda;
-}
-
-.stat-card h3 {
-  font-size: 2rem;
-  color: #64ffda;
-  margin-bottom: 0.5rem;
-}
-
-.stat-card p {
-  color: #8892b0;
-  font-size: 0.9rem;
-}
-
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.5rem;
   }
 
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .about-interests ul {
     grid-template-columns: 1fr;
-  }
-
-  .about-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .stat-card {
-    padding: 1rem;
-  }
-
-  .stat-card h3 {
-    font-size: 1.5rem;
   }
 }
