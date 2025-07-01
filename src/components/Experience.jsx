@@ -31,18 +31,6 @@ const Experience = () => {
       ]
     },
     {
-      title: ".NET Web Developer Intern",
-      company: "Tumed Applications",
-      location: "Amman",
-      period: "May 2023 - August 2023",
-      responsibilities: [
-        "Learned MVC architecture and building RESTful APIs using .NET",
-        "Enhanced backend development skills through practical application",
-        "Collaborated with senior developers on real-world projects",
-        "Participated in code reviews and improved coding practices"
-      ]
-    },
-    {
       title: "UI/UX Designer Intern",
       company: "Hope International Academy",
       location: "Amman", 
