@@ -24,7 +24,7 @@ const Projects = () => {
       longDescription: "A responsive company website built from scratch using React and Tailwind CSS. Features modern animations, custom logo design, and professional portfolio presentation with focus on clean UI/UX and performance optimization.",
       tags: ["React", "Tailwind CSS", "UI/UX Design", "Performance"],
       image: "/lovable-uploads/1e556792-9292-45eb-b8f4-29bd506ad332.png",
-      live: "https://al-eidi.com",
+      live: "al-eidi.com",
       gradient: "from-emerald-500/20 to-teal-500/20",
       accentColor: "border-emerald-500/50 text-emerald-400",
       featured: true
@@ -102,7 +102,7 @@ const Projects = () => {
                   className="absolute -top-4 left-8 z-20 flex items-center space-x-2 px-4 py-2 bg-portfolio-highlight text-portfolio-primary rounded-full font-bold text-sm shadow-lg"
                   initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                   whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                  viewport={ once: true }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
                 >
                   <Sparkles size={16} />
@@ -253,7 +253,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition{{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
           <motion.a 
             href="https://github.com/MohamadAbudraiea" 
