@@ -1,8 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Calendar, MapPin, Building } from "lucide-react";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,60 +11,56 @@ const Experience = () => {
       company: "DOTMEDIA",
       position: "Backend Engineer",
       period: "Current",
+      location: "Remote",
       responsibilities: [
-        "Developing and maintaining backend services",
-        "Implementing scalable web applications",
-        "Working with modern backend technologies",
-        "Collaborating with cross-functional teams"
-      ]
+        "Developing and maintaining backend services using modern technologies",
+        "Implementing scalable web applications with clean architecture patterns",
+        "Working with distributed systems and cloud infrastructure",
+        "Collaborating with cross-functional teams to deliver high-quality solutions"
+      ],
+      current: true
     },
     {
       company: "Jo Academy",
       position: "Lecturer",
       period: "February 2023 - Present",
+      location: "Amman, Jordan",
       responsibilities: [
         "Teach OOP in Java, C++, and relational databases to university students",
         "Develop comprehensive course materials for programming concepts",
         "Guide students through programming concepts and practical applications",
         "Provide one-on-one mentoring for students struggling with complex topics"
-      ]
+      ],
+      current: true
     },
     {
       company: "Thinking Flares School",
       position: "Operational Manager",
       period: "February 2021 - October 2024",
+      location: "As Salt, Jordan",
       responsibilities: [
-        "Implemented IT-driven business solutions to enhance efficiency",
-        "Streamlined operations through technological integration",
-        "Oversaw business strategy planning and execution in a hybrid work environment",
+        "Implemented IT-driven business solutions to enhance operational efficiency",
+        "Streamlined operations through technological integration and process optimization",
+        "Oversaw business strategy planning and execution in hybrid work environment",
         "Improved overall school experience through modern management techniques"
-      ]
-    },
-    {
-      company: "Tumed Applications",
-      position: ".NET Web Developer Intern",
-      period: "May 2023 - August 2023",
-      responsibilities: [
-        "Learned MVC architecture and building RESTful APIs using .NET",
-        "Enhanced backend development skills through practical application",
-        "Collaborated with senior developers on real-world projects",
-        "Participated in code reviews and improved coding practices"
-      ]
+      ],
+      current: false
     },
     {
       company: "Hope International Academy",
       position: "UI/UX Designer Intern",
       period: "September 2023 - November 2023",
+      location: "Amman, Jordan",
       responsibilities: [
         "Gained professional expertise in Figma for interface design",
         "Created user-friendly interfaces for various applications",
         "Improved UI/UX workflows and design processes",
         "Collaborated with development teams to implement designs"
-      ]
+      ],
+      current: false
     },
   ];
 
-  // Add volunteering experiences
   const volunteeringExperiences = [
     {
       organization: "University of Jordan Innovation and Entrepreneurship Center (UJIEC)",
@@ -77,136 +72,234 @@ const Experience = () => {
   ];
   
   return (
-    <section id="experience" className="py-20 px-8 md:px-32 bg-portfolio-secondary">
+    <section id="experience" className="py-32 px-8 md:px-32 bg-gradient-to-br from-portfolio-secondary via-portfolio-primary to-portfolio-secondary relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-portfolio-highlight/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-portfolio-highlight/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto"
+        transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto relative z-10"
       >
-        <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-          <h2 className="text-3xl font-semibold text-portfolio-heading flex items-center">
-            <span className="text-portfolio-highlight font-mono mr-2">04.</span> Experience
-            <div className="h-px bg-portfolio-tertiary w-24 ml-6 md:block hidden"></div>
-          </h2>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row justify-between items-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex items-center mb-8 md:mb-0"
+          >
+            <Building className="text-portfolio-highlight mr-4" size={40} />
+            <div>
+              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-portfolio-heading to-portfolio-highlight bg-clip-text text-transparent">
+                <span className="font-mono text-2xl text-portfolio-highlight mr-4">04.</span>
+                Experience
+              </h2>
+              <div className="h-1 bg-gradient-to-r from-portfolio-highlight to-transparent w-32 mt-2 rounded-full"></div>
+            </div>
+          </motion.div>
           
-          {/* Profile image with professional styling */}
+          {/* Profile Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 md:mt-0"
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="relative"
           >
-            <div className="relative rounded-full overflow-hidden border-4 border-portfolio-highlight/30 shadow-xl shadow-portfolio-highlight/10 w-32 h-32">
+            <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-portfolio-highlight/40 shadow-2xl shadow-portfolio-highlight/20 hover:scale-105 transition-transform duration-300">
               <img 
                 src="/lovable-uploads/dc486bc8-37e9-4909-84bb-af952dfa2dd6.png" 
                 alt="Mohamad Abudraiea" 
                 className="w-full h-full object-cover"
               />
             </div>
+            <div className="absolute -top-2 -right-2 w-6 h-6 bg-portfolio-highlight rounded-full animate-pulse"></div>
           </motion.div>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-6">
-          {/* Tabs */}
-          <div className="flex md:flex-col overflow-x-auto md:overflow-visible md:border-l-0 md:border-l-portfolio-tertiary">
-            {jobs.map((job, index) => (
-              <button
-                key={index}
-                className={`px-4 py-3 border-b-2 md:border-b-0 md:border-l-2 text-sm font-mono whitespace-nowrap transition-all
-                ${activeTab === index 
-                  ? 'text-portfolio-highlight border-portfolio-highlight bg-portfolio-tertiary/30' 
-                  : 'text-portfolio-text border-portfolio-tertiary hover:bg-portfolio-tertiary/10 hover:text-portfolio-highlight'}`}
-                onClick={() => setActiveTab(index)}
-              >
-                {job.company}
-              </button>
-            ))}
-          </div>
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Company Tabs */}
+          <motion.div 
+            className="lg:col-span-1"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible gap-2 lg:gap-1 pb-4 lg:pb-0">
+              {jobs.map((job, index) => (
+                <motion.button
+                  key={index}
+                  className={`relative px-6 py-4 text-left rounded-xl lg:rounded-l-xl lg:rounded-r-none transition-all duration-300 whitespace-nowrap lg:whitespace-normal border-l-4 lg:border-l-4 lg:border-b-0 
+                  ${activeTab === index 
+                    ? 'text-portfolio-highlight border-portfolio-highlight bg-portfolio-highlight/10 shadow-lg' 
+                    : 'text-portfolio-text border-portfolio-tertiary hover:bg-portfolio-tertiary/20 hover:text-portfolio-highlight hover:border-portfolio-highlight/50'}`}
+                  onClick={() => setActiveTab(index)}
+                  whileHover={{ scale: 1.02, x: 5 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="flex items-center gap-2 lg:block">
+                    <span className="font-mono text-sm font-bold">
+                      {job.company}
+                    </span>
+                    {job.current && (
+                      <span className="px-2 py-1 text-xs bg-portfolio-highlight text-portfolio-primary rounded-full font-bold lg:mt-1 lg:inline-block">
+                        CURRENT
+                      </span>
+                    )}
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
           
-          {/* Content */}
-          <div className="md:col-span-3">
+          {/* Job Content */}
+          <motion.div 
+            className="lg:col-span-3"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
             {jobs.map((job, index) => (
               <motion.div
                 key={index}
-                className={activeTab === index ? 'block' : 'hidden'}
+                className={`${activeTab === index ? 'block' : 'hidden'} space-y-6`}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
+                animate={{ opacity: activeTab === index ? 1 : 0, y: activeTab === index ? 0 : 20 }}
+                transition={{ duration: 0.4 }}
               >
-                <h3 className="text-xl text-portfolio-heading mb-1">
-                  {job.position} <span className="text-portfolio-highlight">@ {job.company}</span>
-                </h3>
-                <p className="font-mono text-sm text-portfolio-text mb-6">{job.period}</p>
-                
-                <ul className="space-y-4">
-                  {job.responsibilities.map((item, idx) => (
-                    <li key={idx} className="flex text-portfolio-text">
-                      <span className="text-portfolio-highlight mr-2">▹</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Job Header */}
+                <div className="bg-gradient-to-br from-portfolio-secondary/60 to-portfolio-primary/40 backdrop-blur-xl p-8 rounded-3xl border border-portfolio-highlight/20 shadow-xl">
+                  <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-portfolio-heading mb-2 lg:mb-0">
+                      {job.position} 
+                      <span className="text-portfolio-highlight"> @ {job.company}</span>
+                    </h3>
+                    {job.current && (
+                      <span className="px-4 py-2 bg-portfolio-highlight text-portfolio-primary rounded-full text-sm font-bold animate-pulse">
+                        CURRENT ROLE
+                      </span>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-col lg:flex-row gap-4 text-portfolio-text font-mono text-sm mb-6">
+                    <div className="flex items-center gap-2">
+                      <Calendar size={16} className="text-portfolio-highlight" />
+                      <span>{job.period}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin size={16} className="text-portfolio-highlight" />
+                      <span>{job.location}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Responsibilities */}
+                  <ul className="space-y-4">
+                    {job.responsibilities.map((item, idx) => (
+                      <motion.li 
+                        key={idx} 
+                        className="flex items-start text-portfolio-text text-lg leading-relaxed"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, delay: idx * 0.1 }}
+                      >
+                        <span className="text-portfolio-highlight mr-4 text-xl mt-1">▸</span>
+                        <span>{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
         
         {/* Volunteering Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-20"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-24"
         >
-          <h3 className="text-2xl font-semibold text-portfolio-heading flex items-center mb-8">
-            <span className="text-portfolio-highlight font-mono mr-2">05.</span> Volunteering
-            <div className="h-px bg-portfolio-tertiary flex-grow ml-6"></div>
-          </h3>
+          <div className="flex items-center mb-12">
+            <h3 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-portfolio-heading to-portfolio-highlight bg-clip-text text-transparent">
+              <span className="font-mono text-xl text-portfolio-highlight mr-4">05.</span>
+              Volunteering
+            </h3>
+            <div className="h-1 bg-gradient-to-r from-portfolio-highlight to-transparent flex-grow ml-8 rounded-full"></div>
+          </div>
           
           <div className="space-y-8">
             {volunteeringExperiences.map((exp, index) => (
               <motion.div 
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-6 bg-portfolio-primary rounded-lg shadow-lg"
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="relative p-8 bg-gradient-to-br from-portfolio-primary/80 to-portfolio-secondary/60 backdrop-blur-xl rounded-3xl border border-portfolio-highlight/30 shadow-2xl hover:shadow-portfolio-highlight/20 hover:scale-[1.02] transition-all duration-300"
               >
-                <h4 className="text-xl text-portfolio-heading mb-1">
-                  {exp.position} <span className="text-portfolio-highlight">@ {exp.organization}</span>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-portfolio-highlight rounded-full animate-pulse"></div>
+                
+                <h4 className="text-2xl font-bold text-portfolio-heading mb-2">
+                  {exp.position}
                 </h4>
-                <p className="font-mono text-sm text-portfolio-text mb-4">{exp.period}</p>
-                <p className="text-portfolio-text mb-4">{exp.description}</p>
+                <h5 className="text-lg text-portfolio-highlight font-semibold mb-4">
+                  @ {exp.organization}
+                </h5>
+                <p className="font-mono text-sm text-portfolio-text mb-6 flex items-center gap-2">
+                  <Calendar size={16} className="text-portfolio-highlight" />
+                  {exp.period}
+                </p>
+                <p className="text-portfolio-text text-lg leading-relaxed mb-6">
+                  {exp.description}
+                </p>
                 
                 {exp.linkedInPost && (
-                  <a 
+                  <motion.a 
                     href={exp.linkedInPost}
                     target="_blank"
                     rel="noopener noreferrer" 
-                    className="flex items-center text-sm font-mono text-portfolio-highlight hover:underline gap-1"
+                    className="inline-flex items-center gap-2 text-portfolio-highlight hover:text-portfolio-heading font-mono text-sm hover:underline transition-colors duration-300 hover:scale-105"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <span>View LinkedIn Post by Dr. Reem Alfayez</span>
-                    <ExternalLink size={14} />
-                  </a>
+                    <span>👀 View LinkedIn Post by Dr. Reem Alfayez</span>
+                    <ExternalLink size={16} />
+                  </motion.a>
                 )}
               </motion.div>
             ))}
           </div>
         </motion.div>
         
-        <div className="mt-16 text-center">
-          <a 
+        {/* Call to Action */}
+        <motion.div 
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={ duration: 0.6, delay: 0.8 }}
+        >
+          <motion.a 
             href="#contact" 
-            className="inline-block py-3 px-8 border border-portfolio-highlight text-portfolio-highlight 
-            font-mono rounded hover:bg-portfolio-highlight/10 transition-all duration-300"
+            className="inline-flex items-center gap-4 py-4 px-10 border-2 border-portfolio-highlight text-portfolio-highlight 
+            font-mono text-lg rounded-2xl hover:bg-portfolio-highlight hover:text-portfolio-primary transition-all duration-300 
+            hover:scale-105 hover:shadow-xl hover:shadow-portfolio-highlight/50"
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Get In Touch
-          </a>
-        </div>
+            <span>Let's Connect!</span>
+            <ExternalLink size={20} />
+          </motion.a>
+        </motion.div>
       </motion.div>
     </section>
   );
